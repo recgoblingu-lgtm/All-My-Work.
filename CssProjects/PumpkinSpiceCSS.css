@@ -1,0 +1,139 @@
+/**
+ * PSL ARCANE FIXED
+ * Proper pumpkin spice latte + magic UI
+ * Clear orange/beige palette (not faint)
+ */
+
+/* =========================
+   BASE
+========================= */
+
+html, body, #app-mount {
+    background: #120b08 !important;
+    font-family: Inter, system-ui, sans-serif !important;
+}
+
+/* reset effects */
+* {
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* =========================
+   BACKGROUND (REAL PSL BASE COLORS)
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -9999;
+
+    background: radial-gradient(
+        circle at 50% 25%,
+        #3b2416,
+        #120b08 55%,
+        #070403 100%
+    );
+
+    filter: saturate(1.15) brightness(0.9);
+}
+
+/* =========================
+   COLOR AURA (CLEAR ORANGE + BEIGE + MAGIC)
+========================= */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -9998;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 165, 90, 0.18), transparent 55%),
+        radial-gradient(circle at 75% 40%, rgba(255, 210, 170, 0.12), transparent 60%),
+        radial-gradient(circle at 55% 80%, rgba(170, 120, 255, 0.10), transparent 65%),
+        radial-gradient(circle at 40% 60%, rgba(0, 220, 255, 0.06), transparent 70%);
+}
+
+/* =========================
+   PANELS (CLEAR PSL STRUCTURE)
+========================= */
+
+[class*="sidebar"],
+[class*="chat"],
+[class*="members"],
+[class*="container"] {
+    background: rgba(40, 25, 16, 0.92) !important;
+    border: 1px solid rgba(255, 170, 110, 0.20);
+}
+
+/* chat (espresso base) */
+[class*="chatContent"] {
+    background: rgba(25, 15, 10, 0.96) !important;
+}
+
+/* =========================
+   TEXT (BEIGE / CREAM DOMINANT)
+========================= */
+
+span, div, p {
+    color: #f3e2c9 !important;
+}
+
+/* usernames */
+strong {
+    color: #ffffff !important;
+}
+
+/* =========================
+   ACCENTS (NOW STRONG PSL ORANGE)
+========================= */
+
+[class*="modeSelected"] {
+    background: rgba(255, 150, 80, 0.22) !important;
+    border-left: 3px solid rgba(255, 170, 110, 0.55);
+}
+
+/* links (clear orange) */
+a {
+    color: #ffb36a !important;
+}
+
+/* =========================
+   BUTTONS (COFFEE + PUMPKIN SPICE)
+========================= */
+
+button {
+    background: #3a2416 !important;
+    border: 1px solid rgba(255, 170, 110, 0.25) !important;
+    color: #f3e2c9 !important;
+}
+
+button:hover {
+    background: #4a2e1c !important;
+    border-color: rgba(255, 170, 110, 0.45) !important;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input, textarea {
+    background: #2a180f !important;
+    border: 1px solid rgba(255, 170, 110, 0.20) !important;
+    color: #f3e2c9 !important;
+}
+
+/* =========================
+   CLEAN UI (NO LAG)
+========================= */
+
+[class*="layer"],
+[class*="backdrop"],
+[class*="focusLock"] {
+    background: transparent !important;
+}
