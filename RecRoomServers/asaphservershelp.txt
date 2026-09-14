@@ -1,0 +1,79 @@
+================================================================================
+🪐 ASAPH SERVERS 2017 — COMPREHENSIVE INITIALIZATION & CONNECTIVITY MANIFEST 🪐
+================================================================================
+
+Follow these five sequential phases exactly to extract your files, initialize 
+your local server stack, and bridge your legacy 2017 Unity game client.
+
+--------------------------------------------------------------------------------
+PHASE 1: EXTRACTION AND INITIAL FILE CLEAN-UP
+--------------------------------------------------------------------------------
+1. Transfer the project archive .zip file from your mobile device to your PC.
+2. Right-click the file, select "Extract All...", choose a destination folder 
+   (such as your PC Desktop), and execute the extraction loop.
+3. Open the newly unzipped directory and navigate directly to:
+   ASAPH2017RR-main/src/managers/
+4. Locate 'lobbyManager.ts', right-click it, and select DELETE. 
+   
+   *CRITICAL: If you do not delete 'lobbyManager.ts', your engine will experience 
+   duplicate type and symbol definitions, causing immediate runtime crashes. 
+   Leave 'photonManager.ts' and 'paintballManager.ts' exactly where they are.
+
+--------------------------------------------------------------------------------
+PHASE 2: INSTALLING THE COMPILER DEPENDENCY RUNTIME
+--------------------------------------------------------------------------------
+Your PC must have the Bun compilation engine configured natively on Windows to 
+interpret the JavaScript/TypeScript binary socket streams.
+
+1. Press the Windows Key, type "PowerShell", and hit Enter to launch a terminal.
+2. Copy and paste this exact command line setup, then hit Enter:
+   powershell -c "irm bun.sh/install.ps1 | iex"
+3. Once the green installation sequence completes, close your PowerShell window.
+
+--------------------------------------------------------------------------------
+PHASE 3: RUNNING THE SERVER INFRASTRUCTURE
+--------------------------------------------------------------------------------
+1. Navigate back into your main project root directory (ASAPH2017RR-main/).
+2. Locate and double-click the automation script named 'start-server.bat'.
+3. A dedicated command terminal window will launch and automatically handle:
+   - Verifying your system variables.
+   - Restoring missing dependency trees inside your hidden folders.
+   - Spinning up your local networking protocols.
+
+4. Keep this terminal running! Verify it reads these exact verification outputs:
+   [SUCCESS] Dependencies configured cleanly.
+   🚀 API Infrastructure listening on port 3000
+   🌐 Photon Multiplayer Server actively listening on port 8080
+
+--------------------------------------------------------------------------------
+PHASE 4: GAME CLIENT TERMINAL REDIRECTION SHORTCUTS
+--------------------------------------------------------------------------------
+Unity game builds must be forced to pass data packets to your localhost instead 
+of official, obsolete servers. Use the shortcut target override method:
+
+1. Locate your legacy 2017 build folder and find the main file: 'RecRoom.exe'
+2. Right-click 'RecRoom.exe' and choose "Create Shortcut".
+3. Right-click the newly generated desktop shortcut icon and select "Properties".
+4. In the Properties window, find the field labeled "Target". It will look like:
+   "C:\Games\RecRoom2017\RecRoom.exe"
+5. Click inside the Target box, scroll to the absolute end of the line, press 
+   the Spacebar ONCE, and append this precise argument chain:
+   -api=http://localhost:3000 -photon=localhost:8080
+
+   *FOR FORCING PCVR HEADSETS: Append a space and '-vr' onto the very end:
+   -api=http://localhost:3000 -photon=localhost:8080 -vr
+
+6. Click Apply, then click OK.
+
+--------------------------------------------------------------------------------
+PHASE 5: INITIALIZING AND CONNECTING MULTIPLAYER
+--------------------------------------------------------------------------------
+1. If playing in VR, wake your headset up and activate Meta Quest Link or 
+   SteamVR boundaries BEFORE executing the shortcut to lock your hands in place.
+2. Double-click your configured desktop game shortcut to boot the client.
+3. Once the main menu populates, select "Login" and type these credentials:
+   - Username: coach
+   - Password: password123
+4. Hit Enter. Your server terminal back-end logs will immediately light up, 
+   verifying active token handshakes, world instantiations, and position syncs!
+================================================================================
